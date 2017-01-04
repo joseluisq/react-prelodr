@@ -33,7 +33,6 @@
     "in-publish": "^2.0.0",
     "jest-cli": "^18.1.0",
     "react": "^15.4.1",
-    "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-test-renderer": "^15.4.1",
     "readline-sync": "^1.4.5",
