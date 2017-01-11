@@ -5,26 +5,37 @@ import Prelodr from './prelodr'
 class App extends React.Component {
 
   onClick () {
-    const pre = this.refs.prelodr
+    const pre = this.refs.myRef
 
     pre
-    .show('Starting...').hide()
-    .show('Processing...').hide()
-    .show('Finishig...').hide()
+      .show('Starting...')
+      .hide()
 
-    pre.onShown(() => {
-      console.log('Shown!')
-    })
+      .show('Processing...')
+      .hide()
 
-    pre.onHidden(() => {
-      console.log('Hidden!')
-    })
+      .show('Finishig...')
+      .hide()
+  }
+
+  onShown () {
+    console.log('When component is shown!')
+  }
+
+  onHidden () {
+    console.log('When component is hidden!')
   }
 
   render () {
     return <div>
       <button onClick={this.onClick.bind(this)}>Start</button>
-      <Prelodr ref='prelodr' prefixClass='prelodr' duration={900} />
+
+      <Prelodr ref='myRef'
+        prefixClass='prelodr'
+        duration={900}
+        onShown={this.onShown}
+        onHidden={this.onHidden}
+      />
     </div>
   }
 
