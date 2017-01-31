@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import Prelodr from 'prelodr'
 
-class ReactPrelodr extends React.Component {
+class ReactPrelodr extends Component {
 
   static propTypes = {
-    container: React.PropTypes.string,
-    duration: React.PropTypes.number,
-    prefixClass: React.PropTypes.string,
-    zIndex: React.PropTypes.number,
-    auto: React.PropTypes.bool,
-    text: React.PropTypes.string,
-    onShown: React.PropTypes.func,
-    onHidden: React.PropTypes.func
+    container: PropTypes.string,
+    duration: PropTypes.number,
+    prefixClass: PropTypes.string,
+    zIndex: PropTypes.number,
+    auto: PropTypes.bool,
+    text: PropTypes.string,
+    onShown: PropTypes.func,
+    onHidden: PropTypes.func
   }
 
   static defaultProps = {
