@@ -12,7 +12,7 @@ npm install react-prelodr --save-dev
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Prelodr from 'react-prelodr'
+import ReactPrelodr from 'react-prelodr'
 
 class App extends React.Component {
 
@@ -47,7 +47,7 @@ class App extends React.Component {
     return <div>
       <button onClick={this.onClick.bind(this)}>Show Prelodr</button>
 
-      <Prelodr ref='myRef'
+      <ReactPrelodr ref='myRef'
         prefixClass='prelodr'
         duration={800}
         onShown={this.onShown}
@@ -64,7 +64,17 @@ ReactDOM.render(
 )
 ```
 
-Check out [Prelodr](https://github.com/joseluisq/prelodr) for more details.
+Check out [Codepen Demo](http://codepen.io/joseluisq/pen/bgLery) for more details.
+
+## CDN
+The UMD and style files are also available on [unpkg](https://unpkg.com):
+
+```html
+<!-- Prelodr Style -->
+<link href="https://unpkg.com/prelodr/dist/prelodr.min.css">
+<!-- React-Prelodr Component -->
+<script src="https://unpkg.com/react-prelodr/dist/react-prelodr.min.js"></script>
+```
 
 ## License
 MIT license

@@ -15,11 +15,17 @@ branches:
   only:
   - master
   - /^greenkeeper-/
+  - /^develop-/
 
 notifications:
   email: false
 
+cache:
+  directories:
+    - node_modules
+
 before_install:
   - npm install -g npm
   - npm --version
+
 after_success: npm run coverage

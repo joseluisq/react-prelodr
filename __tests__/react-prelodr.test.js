@@ -1,13 +1,14 @@
 /* global describe, it, expect, jest */
 
 import React from 'react'
-import Prelodr from '../src/prelodr'
 import { mount } from 'enzyme'
+import Prelodr from '../src/react-prelodr'
 
 jest.useFakeTimers()
 
 const myShowMock = jest.fn()
 const myHideMock = jest.fn()
+
 const wrapper = mount(
   <Prelodr
     prefixClass='prelodr'
@@ -38,7 +39,7 @@ describe('react-prelodr test suite', () => {
     expect(node.getPrelodr()).toBeDefined()
   })
 
-  it('api should be defined', () => {
+  it('should be contain the text', () => {
     node.show(str).hide()
     expect(wrapper.text()).toContain(str)
   })
