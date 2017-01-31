@@ -1,7 +1,7 @@
 import React from 'react'
 import Prelodr from 'prelodr'
 
-export default class ReactPrelodr extends React.Component {
+class ReactPrelodr extends React.Component {
 
   static propTypes = {
     container: React.PropTypes.string,
@@ -71,3 +71,5 @@ export default class ReactPrelodr extends React.Component {
     })
   }
 }
+
+module.exports = ReactPrelodr
