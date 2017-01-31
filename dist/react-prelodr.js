@@ -2,7 +2,7 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define([], factory);
+		define("ReactPrelodr", [], factory);
 	else if(typeof exports === 'object')
 		exports["ReactPrelodr"] = factory();
 	else
@@ -3628,8 +3628,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ReactPrelodr = function (_Component) {
-  _inherits(ReactPrelodr, _Component);
+var ReactPrelodr = function (_React$Component) {
+  _inherits(ReactPrelodr, _React$Component);
 
   function ReactPrelodr() {
     var _ref;
@@ -3706,17 +3706,17 @@ var ReactPrelodr = function (_Component) {
   }]);
 
   return ReactPrelodr;
-}(_react.Component);
+}(_react2.default.Component);
 
 ReactPrelodr.propTypes = {
-  container: _react.PropTypes.string,
-  duration: _react.PropTypes.number,
-  prefixClass: _react.PropTypes.string,
-  zIndex: _react.PropTypes.number,
-  auto: _react.PropTypes.bool,
-  text: _react.PropTypes.string,
-  onShown: _react.PropTypes.func,
-  onHidden: _react.PropTypes.func
+  container: _react2.default.PropTypes.string,
+  duration: _react2.default.PropTypes.number,
+  prefixClass: _react2.default.PropTypes.string,
+  zIndex: _react2.default.PropTypes.number,
+  auto: _react2.default.PropTypes.bool,
+  text: _react2.default.PropTypes.string,
+  onShown: _react2.default.PropTypes.func,
+  onHidden: _react2.default.PropTypes.func
 };
 ReactPrelodr.defaultProps = {
   container: 'span',

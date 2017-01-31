@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Prelodr from './prelodr'
+import Prelodr from './react-prelodr'
 
 class App extends React.Component {
 

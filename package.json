@@ -48,8 +48,8 @@
   "scripts": {
     "start": "webpack-dev-server -d --content-base ./ --hot --inline src/app.js",
     "build:lib": "babel ./src -d . --ignore 'test.js' --ignore 'app.js'",
-    "build:umd": "webpack src/react-prelodr.js dist/react-prelodr.js",
-    "build:min": "webpack -p src/react-prelodr.js dist/react-prelodr.min.js",
+    "build:umd": "webpack --progress --colors src/react-prelodr.js dist/react-prelodr.js",
+    "build:min": "webpack --progress --colors -p src/react-prelodr.js dist/react-prelodr.min.js",
     "build": "node ./scripts/build.js",
     "prepublish": "node ./scripts/build.js",
     "release": "node ./scripts/release.js",
