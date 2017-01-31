@@ -64,7 +64,7 @@ ReactDOM.render(
 )
 ```
 
-Check out [Prelodr](https://github.com/joseluisq/prelodr) for more details.
+Check out [Codepen Demo](http://codepen.io/joseluisq/pen/bgLery) for more details.
 
 ## CDN
 The UMD and style files are also available on [unpkg](https://unpkg.com):
