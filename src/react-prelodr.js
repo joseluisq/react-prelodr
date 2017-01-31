@@ -1,7 +1,4 @@
-/* global module */
-
 import React, { Component, PropTypes } from 'react'
-import ReactDOM from 'react-dom'
 import Prelodr from 'prelodr'
 
 export default class ReactPrelodr extends Component {
@@ -31,9 +28,7 @@ export default class ReactPrelodr extends Component {
   render () {
     const Container = this.props.container
 
-    return <Container
-      ref={node => this.container = node}
-    />
+    return <Container ref={ node => this.container = node } />
   }
 
   componentDidMount () {

@@ -1,12 +1,17 @@
 const webpack = require('webpack')
 
 module.exports = {
+  output: {
+    library: 'ReactPrelodr',
+    libraryTarget: 'umd'
+  },
+
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       }
     ]
   },
