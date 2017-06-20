@@ -3,10 +3,9 @@ sudo: false
 language: node_js
 
 node_js:
-  - '4'
-  - '5'
   - '6'
   - '7'
+  - '8'
 
 git:
   depth: 1
@@ -14,18 +13,12 @@ git:
 branches:
   only:
   - master
-  - /^greenkeeper-/
-  - /^develop-/
-
-notifications:
-  email: false
+  - /^greenkeeper/.*$/
 
 cache:
+  yarn: true
   directories:
     - node_modules
 
-before_install:
-  - npm install -g npm
-  - npm --version
-
-after_success: npm run coverage
+notifications:
+  email: false

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { mount } from 'enzyme'
-import Prelodr from '../src/react-prelodr'
+import Prelodr from './'
 
 jest.useFakeTimers()
 

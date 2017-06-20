@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Prelodr from 'prelodr'
 
-class ReactPrelodr extends Component {
-
+export default class ReactPrelodr extends Component {
   static propTypes = {
     container: PropTypes.string,
     duration: PropTypes.number,
@@ -28,7 +28,7 @@ class ReactPrelodr extends Component {
   render () {
     const Container = this.props.container
 
-    return <Container ref={ node => this.container = node } />
+    return <Container ref={node => (this.container = node)} />
   }
 
   componentDidMount () {
@@ -54,22 +54,22 @@ class ReactPrelodr extends Component {
   getPrelodr = () => this.prelodr
 
   addEventShown () {
-    if (!typeof this.props.onShown === 'function') return
-
     this.prelodr.on('shown', () => {
       this.setState({ active: true })
-      this.props.onShown()
+
+      if (this.props.onShown && typeof this.props.onShown === 'function') {
+        this.props.onShown()
+      }
     })
   }
 
   addEventHidden () {
-    if (!typeof this.props.onHidden === 'function') return
-
     this.prelodr.on('hidden', () => {
       this.setState({ active: false })
-       this.props.onHidden()
+
+      if (this.props.onHidden && typeof this.props.onHidden === 'function') {
+        this.props.onHidden()
+      }
     })
   }
 }
-
-module.exports = ReactPrelodr
