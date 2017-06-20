@@ -1,5 +1,5 @@
-dist
 !modules
+dist
 node_modules
 bower_components
 __snapshots__
