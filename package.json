@@ -27,6 +27,7 @@
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -57,9 +58,9 @@
     "start": "export NODE_ENV=development && webpack-dev-server -d --content-base ./app --hot --inline ./app/app.js",
     "mkdir:dist": "mkdir -p dist",
     "version": "npm run build",
-    "build:lib": "babel index.js -o ./dist/react-prelodr.js --ignore 'test.js' --ignore 'app.js'",
-    "build:min": "webpack --progress --colors -p index.js dist/react-prelodr.min.js",
-    "build": "export NODE_ENV=production && npm run mkdir:dist && npm run build:lib && npm run build:min",
+    "build:lib": "export NODE_ENV=commonjs && babel index.js -o ./dist/react-prelodr.js --ignore 'test.js' --ignore 'app.js'",
+    "build:min": "export NODE_ENV=umd && webpack --progress --colors -p index.js dist/react-prelodr.min.js",
+    "build": "npm run mkdir:dist && npm run build:lib && npm run build:min",
     "lint": "eslint src",
     "test": "export NODE_ENV=testing && npm run lint && jest --coverage",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
@@ -78,7 +79,7 @@
           "react"
         ]
       },
-      "production": {
+      "commonjs": {
         "presets": [
           [
             "es2015",
@@ -90,6 +91,22 @@
           "react"
         ],
         "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      },
+      "umd": {
+        "presets": [
+          [
+            "es2015",
+            {
+              "modules": false
+            }
+          ],
+          "stage-0",
+          "react"
+        ],
+        "plugins": [
+          "add-module-exports",
           "transform-es2015-modules-commonjs"
         ]
       },
