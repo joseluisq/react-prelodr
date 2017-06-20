@@ -22,6 +22,8 @@ bower.json
 *.md
 **/*.md
 test
+/*.js
+yarn.lock
 .babelrc
 .eslintrc
 index.html
