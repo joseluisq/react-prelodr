@@ -3,6 +3,14 @@
 
 ## Install
 
+[Yarn](https://github.com/yarnpkg/)
+
+```sh
+yarn add react-prelodr --dev
+```
+
+[NPM](https://www.npmjs.com/)
+
 ```sh
 npm install react-prelodr --save-dev
 ```
